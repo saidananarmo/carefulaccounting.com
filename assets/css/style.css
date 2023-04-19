@@ -1,0 +1,83 @@
+.upper-header {
+    background-color: black;
+}
+
+.upper-header .tel {
+    background-color: rgb(114, 114, 152);
+    color: white;
+}
+
+.upper-header a {
+    color: white;
+}
+
+header {
+    background-color: rgb(29, 29, 56);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(to right, rgb(114, 114, 152), rgb(35, 35, 126));
+    color: white;
+    min-height: 25vh;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.btn-blue {
+    background-color: rgb(39, 113, 142);
+    color: white;
+}
+
+.btn-purple {
+    color: white;
+    background-color: rgb(35, 35, 126);
+}
+
+.btn-white {
+    background-color: white;
+    color: black;
+}
+
+form {
+    background-color: rgb(29, 29, 56);
+    color: white;
+}
+
+.text-small {
+    font-size: 0.8rem;
+}
+
+.text-purple {
+    color:rgb(35, 35, 126);
+    font-weight: bolder;
+}
+
+.line-white-top {
+    border-top: white solid 1px;
+}
+
+footer {
+    background: linear-gradient(to right, rgb(114, 114, 152), rgb(35, 35, 126));
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer h3 {
+    font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+    .row-high {
+        min-height: 80vh;
+    }
+}

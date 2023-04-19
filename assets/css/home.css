@@ -1,0 +1,26 @@
+.hero {
+    min-height: 80vh;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.test {
+    min-width: 500px;
+}
+
+h2, h3 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.h2-larger {
+    font-size: 3.5rem;
+}
+
+.contact h2 {
+    color: rgb(35, 35, 126);
+}
+
