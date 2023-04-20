@@ -18,6 +18,11 @@ h1, h2, h3, h4, header a, .upper-header a, .btn, .list p, label {
     border-radius: 30px;
 }
 
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
 .upper-header {
     background: linear-gradient(to right, rgb(158, 173, 203), rgb(66, 73, 200));
 }

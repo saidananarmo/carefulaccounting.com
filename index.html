@@ -14,7 +14,15 @@
 <body>
     <div class="upper-header">
         <div class="container">
-            <div class="d-flex justify-content-end text-end">
+            <div class="d-none d-md-flex justify-content-end text-end">
+                <div class="p-3">
+                    <a href="contact.html">CONTACT US</a>
+                </div>
+                <div class=" p-3">
+                    <a class="tel p-3" href="tel:13472578120">(347) 257-8120</a>
+                </div>
+            </div>
+            <div class="d-flex d-md-none justify-content-center">
                 <div class="p-3">
                     <a href="contact.html">CONTACT US</a>
                 </div>
@@ -27,10 +35,13 @@
     <header>
         <div class="container p-4">
             <div class="row align-items-center">
-                <div class="col-12 col-md-3 me-auto">
-                    <img class="w-100" src="assets/img/logo.png" />
+                <div class="d-none d-md-block col-12 col-md-3 me-auto">
+                    <a href="index.html"><img class="w-100" src="assets/img/logo-black.png" /></a>
                 </div>
-                <div class="col-12 col-md-8 d-flex justify-content-end">
+                <div class="d-block d-md-none col-12 col-md-3 me-auto w-75">
+                    <a href="index.html"><img class="w-75" src="assets/img/logo-black.png" /></a>
+                </div>
+                <div class="d-none d-md-flex col-12 col-md-8 justify-content-end">
                     <div class="me-3">
                         <a href="erc-application.html">ERC APPLICATION</a>
                     </div>
@@ -47,6 +58,19 @@
                         <a href="our-company.html">OUR COMPANY</a>
                     </div>
                 </div>
+                <a class="col-1 d-block d-md-none nav-button ml-auto mr-4"><span id="nav-icon3"><span></span><span></span><span></span><span></span></span></a>
+                <div class="fixed-top dineuron-menu">
+                    <div class="flex-center p-5">
+                      <ul class="nav flex-column">
+                        <li class="nav-item delay-1"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item delay-1"><a class="nav-link" href="erc-application.html">ERC APPLICATION</a></li>
+                        <li class="nav-item delay-2"><a class="nav-link" href="erc-advance.html">ERC ADVANCE</a></li>
+                        <li class="nav-item delay-2"><a class="nav-link" href="about-erc.html">ABOUT ERC</li>
+                        <li class="nav-item delay-2"><a class="nav-link" href="referral-partner.html">REFERRAL PARTNER</a></li>
+                        <li class="nav-item delay-2"><a class="nav-link" href="our-company.html">OUR COMPANY</a></li>
+                      </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -61,11 +85,15 @@
                         <li>Up to $26,000 per Employee</li>
                         <li>No Upfront Costs</li>
                     </ul>
-                    <div>
-                        <a href="erc-application.html" role="button" class="btn btn-blue p-3 px-4 me-3">CHECK ERC ELIGIBILITY</a>
-                        <a href="erc-advance.html" role="button" class="btn btn-white p-3 px-4">ERC ADVANCE PAYMENT</a>
+                    <div class="d-flex flex-column flex-md-row">
+                        <a href="erc-application.html" role="button" class="btn btn-blue p-3 px-4 me-3 mb-4 mb-md-0 w-100 w-md-25">CHECK ERC ELIGIBILITY</a>
+                        <a href="erc-advance.html" role="button" class="btn btn-white p-3 px-4 w-100 w-md-25">ERC ADVANCE PAYMENT</a>
                     </div>
                     <p class="fst-italic mt-3 fs-4">We only collect our fee when you get approved!</p>
+                    <div class="me-auto">
+                        <h3 class="fs-5">Up to 80% of Credit</h3>
+                        <p>In as little as 72 hours</p>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
                     <lottie-player class="test" src="assets/img/girl-checking-global-economics.json" background="transparent"  speed="1" loop autoplay></lottie-player>
@@ -76,22 +104,20 @@
     </section>
 
     <main>
-        <div class="container pt-5 d-flex row-high align-items-center">
+        <div class="container p-4 pt-5 d-flex row-high align-items-center">
             <div class="row justify-content-between">
                 <div class="col-12 col-md-5">
                     <h2>Advance Payment</h2>
                     <p>Accelerate your ERC refund by taking advantage of our funding partners’ Advance Payment Program, which allows your business to potentially receive the benefits of your cash refund in just days instead of waiting up to a year. Whether you have already filed your ERC claim or want our professionals to file it for you, we can assist you!</p>
                     <p>With obtaining the cash you need now to operate and grow your business today. Don't wait any longer to get the money you need and deserve. Contact us now and get started!</p>
-                    <div class="d-flex flex-column flex-md-row align-items-center">
-                        <div class="me-auto">
-                            <h3 class="fs-5">Up to 80% of Credit</h3>
-                            <p>In as little as 72 hours</p>
-                        </div>
-                        <a href="erc-advance.html" role="button" class="btn btn-blue p-3 px-4">APPLY FOR ADVANCE</a>
+                    <div class="mt-5">
+                        <a href="erc-advance.html" role="button" class="me-auto btn btn-blue p-3 px-4 w-100 w-md-25 me-3">APPLY FOR ADVANCE</a>
+                        <p class="w-100 w-md-25 mt-3 text-center">Many companies who previously benefited from PPP have also received their ERC refund.</p>
                     </div>
                     
+                    
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mt-5 mt-md-0 pt-md-0 pt-5">
                     <h2>Robust Support</h2>
                     <p class="mb-5">You will have a dedicated Attorney, CPA, and Refund Specialist working hard on your behalf to ensure that your business receives every penny it deserves. We only get paid when you get approved for a refund, so you can trust that we are fully committed to securing your ERC refund.</p>
                     <div class="d-flex">
@@ -111,11 +137,11 @@
     </main>
 
     <section>
-        <div class="container p-4">
+        <div class="container p-4 mt-5 pt-5">
             <div class="row row-high">
                 <div class="col-12 col-md-6">
-                    <h2>Recent Refunds</h2>
-                    <p>Our simple and stress free process has helped many clients enjoy the benefits of the ERTC program. We use a proven process that analyzes important savings opportunities and maximizes your business’ allowable refund while still maintaining strict compliance with IRS regulations.</p>
+                    <h2>Unique Protection</h2>
+                    <p> We stand by our work and we are one of the only companies that offers businesses an “Audit Protection Program” which means if your business should face any challenges from the IRS related to our services, you can rest assured that we will be there to defend you ! Choose us as your trusted provider!</p>
                 </div>
                 <div class="col-12 col-md-6">
                     <lottie-player class="w-100" src="assets/img/girl-getting-funds-protection.json" background="transparent"  speed="1" loop autoplay></lottie-player>
@@ -134,7 +160,7 @@
                         <a href="about-erc.html" role="button" class="btn btn-blue p-3 px-4">LEARN ABOUT ERC</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 fs-4 list fw-bolder">
+                <div class="col-12 col-md-6 fs-4 list fw-bolder mt-5 mt-md-0 pb-5 pb-md-0">
                     <div class="d-flex align-items-center mb-2">
                         <img class="me-2" src="assets/img/checkmark (1).png" style="width: 30px; height: 30px;" >
                         <p class="mb-0">Full or Partial Shutdowns</p>
@@ -195,12 +221,12 @@
     </section>
 
     <section class="contact bg-light">
-        <div class="container p-4">
+        <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 p-0 p-md-5 ps-md-0">
+                <div class="col-12 col-md-5 p-4 p-md-5 ps-md-0 me-auto pb-5 pb-md-0">
                     <h2>Now is the Time to Put Your ERC Refund to Work for Your Business</h2>
                     <p>At Priority Concepts, we believe every business owner deserves the opportunity to grow their organization. The Employee Retention Credit Program was created to increase business stability and growth. Our goal is to help you maximize the value of the refund so your business turns the corner from surviving to thriving.</p>
-                    <div class="list fw-bolder">
+                    <div class="list fw-bolder mt-5 mt-md-0">
                         <div class="d-flex align-items-center mb-3 fs-4">
                             <img class="me-2" src="assets/img/checkmark (1).png" style="width: 30px; height: 30px;" >
                             <p class="mb-0">Invest in Growth for your Business</p>
@@ -226,12 +252,12 @@
                             <p class="mb-0">Cover your Operating Expenses</p>
                         </div>
                     </div>
-                    <div class="mt-5">
+                    <div class="mt-5 d-flex flex-column align-items-center d-md-block my-5 my-md-0 pt-5 pt-md-0">
                         <p class="mb-0">CALL US TODAY</p>
                         <p class="fs-3 text-purple">(347) 257-8120</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 p-0">
                     <form action="POST" class="p-4">
                         <h3 class="fs-5">Whether Priority Concepts processes your claim or you have a claim prepared, you can count on us to get your money back.</h3>
 
@@ -256,7 +282,7 @@
                             <input type="text" class="form-control" id="state">
                         </div>
                         <p class="text-small">By clicking on Get Started, I request and provide consent to Careful Accounting to contact me by email, phone, or text message at the number provided above regarding Adesso’s services and programs. I understand that message or data rates may apply, and that I may withdraw this authorization and consent at any time.*</p>
-                        <input type="submit" class="btn btn-white p-3 px-4">
+                        <input type="submit" class="btn btn-white p-3 px-4 w-100">
                     </form>
                 </div>
             </div>
@@ -266,51 +292,93 @@
     <footer>
         <div class="container p-4">
             <div class="row align-items-center">
-                <div class="col-12 col-md-4 me-auto">
+                <div class="col-12 col-md-4 me-auto mb-5">
                     <img class="w-50" src="assets/img/logo.png">
                     <p>Are you ready to learn how much your business could be saving? Interested in exploring how ERC funds can help your organization grow? Reach out to us today to start the ERC refund process or an advance payment on your refund.</p>
                 </div>
-                <div class="col-12 col-md-8 d-flex flex-column flex-md-row justify-content-end">
+                <div>
+<div class="d-none d-md-flex col-12 col-md-8 flex-column flex-md-row justify-content-end">
                     <div class="col-12 col-md-2">
                         <h3>ERC INFO</h3>
                         <div class="d-flex flex-column">
-                            <a href="">About ERC</a>
-                            <a href="">Application</a>
+                            <a href="about-erc.html">About ERC</a>
+                            <a href="erc-application.html">Application</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-2">
                         <h3>ERC ADVANCE</h3>
                         <div class="d-flex flex-column">
-                            <a href="">Advance Payment</a>
-                            <a href="Applica">Application</a>
+                            <a href="erc-advance.html">Advance Payment</a>
+                            <a href="erc-application.html">Application</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-2">
                         <div class="d-flex flex-column">
                             <h3>Referral</h3>
-                            <a href="">Overview</a>
+                            <a href="referral-partner.html">Overview</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-2">
                         <div class="d-flex flex-column">
                             <h3>OUR COMPANY</h3>
-                            <a href="">About us</a>
-                            <a href="">Contact us</a>
+                            <a href="about-erc.html">About us</a>
+                            <a href="contact.html">Contact us</a>
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="d-flex mb-5">
+                        <div class="col-5 p-0">
+                            <h3>ERC INFO</h3>
+                            <div class="d-flex flex-column">
+                                <a href="about-erc.html">About ERC</a>
+                                <a href="erc-application.html">Application</a>
+                            </div>
+                        </div>
+                        <div class="col-5 p-0">
+                            <h3>ERC ADVANCE</h3>
+                            <div>
+                                <a href="erc-advance.html">Advance Payment</a>
+                                <a href="erc-application.html">Application</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-5">
+                            <div>
+                                <h3>RREFERRAL</h3>
+                                <a href="referral-partner.html">Overview</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>OUR COMPANY</h3>
+                                <div class="d-flex flex-column">
+                                    <a href="about-erc.html">About us</a>
+                                    <a href="contact.html">Contact us</a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
             </div>
             <div class="row mt-5">
-                <div class="col-12 col-md-6 d-flex align-items-center">
-                    <p class="fs-2 me-5 mb-0 fw-bolder">Time is running low.</p>
-                    <a href="erc-application.html" role="button" class="btn btn-blue p-3 px-4">CHECK ELIGIBILITY</a>
+                <div class="col-12 col-md-6 d-flex flex-column flex-md-row justify-content-center align-items-center">
+                    <p class="fs-2 me-0 me-md-5 mb-3 mb-md-0 fw-bolder">Time is running low.</p>
+                    <a href="erc-application.html" role="button" class="btn btn-black p-3 px-4">CHECK ELIGIBILITY</a>
                 </div>
             </div>
             <div class="line-white-top mb-3 mt-3"></div>
-            <div class="d-flex">
+            <div class="d-flex flex-column flex-md-row">
                 <p id="copyright"></p>
-                <a href="privacy.html" class="ms-4 me-4">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
+                <div class="d-flex ps-0">
+                    <a href="privacy.html" class="ms-0 md-md-4 me-4">Privacy Policy</a>
+                    <a href="terms.html">Terms of Use</a>
+                </div>
+               
             </div>
 
         </div>
