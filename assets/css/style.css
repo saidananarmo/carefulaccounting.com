@@ -19,7 +19,7 @@ h1, h2, h3, h4, header a, .upper-header a, .btn, .list p, label {
 }
 
 .upper-header {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(40, 40, 40));
+    background: linear-gradient(to right, rgb(158, 173, 203), rgb(66, 73, 200));
 }
 
 .upper-header .tel {
@@ -37,7 +37,7 @@ h1, h2, h3, h4, header a, .upper-header a, .btn, .list p, label {
 }
 
 header {
-    background: rgb(0, 0, 0);
+    background: linear-gradient(to left, rgb(158, 173, 203), rgb(66, 73, 200));
 }
 
 header a {
@@ -47,7 +47,7 @@ header a {
 }
 
 .hero {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(40, 40, 40));
+    background: linear-gradient(to right, rgb(158, 173, 203), rgb(66, 73, 200)); 
     color: white;
     min-height: 25vh;
 }
