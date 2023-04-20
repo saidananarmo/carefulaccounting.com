@@ -1,27 +1,53 @@
+@import url("https://use.typekit.net/pox5gjp.css");
+
+* {
+    transition: 0.2s;
+}
+p, li {
+    font-family: "proxima-nova", sans-serif;
+}
+
+h1, h2, h3, h4, header a, .upper-header a, .btn, .list p {
+    font-family: "quatro", sans-serif;
+}
+
+
+
+.btn {
+    font-weight: bolder;
+    border-radius: 30px;
+}
+
 .upper-header {
-    background-color: black;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(40, 40, 40));
 }
 
 .upper-header .tel {
-    background-color: rgb(114, 114, 152);
+    background-color: rgb(56, 61, 131);
     color: white;
 }
 
 .upper-header a {
     color: white;
+    font-weight: bolder;
+}
+
+.upper-header a:hover, header a:hover {
+    color: rgb(135, 135, 183);
 }
 
 header {
-    background-color: rgb(29, 29, 56);
+    background: rgb(0, 0, 0);
 }
 
 header a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    font-weight: bolder;
 }
 
 .hero {
-    background: linear-gradient(to right, rgb(114, 114, 152), rgb(35, 35, 126));
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(40, 40, 40));
     color: white;
     min-height: 25vh;
 }
@@ -32,7 +58,7 @@ h1 {
 }
 
 .btn-blue {
-    background-color: rgb(39, 113, 142);
+    background-color: rgb(56, 61, 131);
     color: white;
 }
 
@@ -47,7 +73,7 @@ h1 {
 }
 
 form {
-    background-color: rgb(29, 29, 56);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 

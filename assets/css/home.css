@@ -3,12 +3,8 @@
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bolder;
-}
-
-.test {
-    min-width: 500px;
 }
 
 h2, h3 {
@@ -24,3 +20,9 @@ h2, h3 {
     color: rgb(35, 35, 126);
 }
 
+main {
+    background: url("../img/financial-consulting.json");
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
