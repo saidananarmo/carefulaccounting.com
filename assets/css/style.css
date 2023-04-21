@@ -3,6 +3,10 @@
 * {
     transition: 0.2s;
 }
+
+.card {
+    border: none;
+}
 p, li {
     font-family: "proxima-nova", sans-serif;
 }

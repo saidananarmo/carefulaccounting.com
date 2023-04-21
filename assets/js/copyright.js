@@ -3,7 +3,7 @@ const copyright = document.getElementById('copyright')
 
 function displayCopyright() {
 
-    copyright.innerHTML = "&copy; " + date.getFullYear() + " Careful Accounting, LLC, LLC - All Rights Reserved"
+    copyright.innerHTML = "&copy; " + date.getFullYear() + " Careful Accounting, LLC - All Rights Reserved"
 }
 
 displayCopyright()
