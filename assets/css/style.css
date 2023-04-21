@@ -9,6 +9,7 @@ p, li {
 
 h1, h2, h3, h4, header a, .upper-header a, .btn, .list p, label {
     font-family: "quatro", sans-serif;
+    font-weight: bolder;
 }
 
 
@@ -108,6 +109,7 @@ footer {
 
 footer a {
     color: white;
+    text-decoration: underline;
 }
 
 footer h3 {
