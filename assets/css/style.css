@@ -35,11 +35,13 @@ h1, h2, h3, h4, header a, .upper-header a, .btn, .list p, label {
 .upper-header .tel {
     background-color: rgb(56, 61, 131);
     color: white;
+    text-decoration: none;
 }
 
 .upper-header a {
     color: white;
     font-weight: bolder;
+    text-decoration: none;
 }
 
 .upper-header a:hover, header a:hover {
@@ -91,6 +93,7 @@ input[type="text"], input[type="tel"], input[type="email"] {
     background: rgba(0,0,0,0);
     border: white solid 1px;
     border-radius: 0;
+    color: rgb(56, 61, 131);
 }
 
 .text-small {
