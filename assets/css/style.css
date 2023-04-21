@@ -102,7 +102,7 @@ input[type="text"], input[type="tel"], input[type="email"] {
     border-top: white solid 1px;
 }
 
-footer {
+footer, .bg-purple {
     background: linear-gradient(to right, rgb(114, 114, 152), rgb(35, 35, 126));
     color: white;
 }
