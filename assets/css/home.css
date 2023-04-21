@@ -1,11 +1,3 @@
-header {
-    background: white;
-}
-
-header a {
-    color: rgb(35, 35, 126);
-}
-
 .hero {
     min-height: 80vh;
 }

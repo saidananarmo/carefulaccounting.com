@@ -42,11 +42,11 @@ h1, h2, h3, h4, header a, .upper-header a, .btn, .list p, label {
 }
 
 header {
-    background: linear-gradient(to left, rgb(158, 173, 203), rgb(66, 73, 200));
+    background: white;
 }
 
 header a {
-    color: rgb(255, 255, 255);
+    color: rgb(35, 35, 126);
     text-decoration: none;
     font-weight: bolder;
 }
