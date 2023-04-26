@@ -118,8 +118,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 p-0">
-                <form action="POST" id="myForm" name="myForm"  enctype="multipart/form-data" method="post" onsubmit="return false;" class="p-4">
-
+                    <form action="POST" id="myForm" name="myForm"  enctype="multipart/form-data" method="post" onsubmit="return false;" class="p-4">
                         <script>
                             function showQuestions() {
                                 // Get the current page and the next page
@@ -131,6 +130,7 @@
                                 nextPage.style.display = "block";
                                 }
                           </script>
+
                           <style>
                             .form-page {
                               display: none;
@@ -139,60 +139,63 @@
                             display: block !important;
                             }
                           </style>
-                          <script>
-                            function showInputBox() {
-                            // Get the input box element
-                            var inputBox = document.getElementById("representative-name");
 
-                            // Show the input box
-                            inputBox.style.display = "block";
-                            }
-
-                            function hideInputBox() {
-                            // Get the input box element
-                            var inputBox = document.getElementById("representative-name");
-
-                            // Hide the input box
-                            inputBox.style.display = "none";
-                            }
-
-                        </script>
                         <h3 class="fs-5 mb-4">Count on us to get the credit you deserve.</h3>
                         <div id="first-page" class="bg-white text-black p-3">
                             <div class="form-group mb-3">
-                                <label for="name">*Company Name</label>
-                                <input type="text" class="form-control" name="name" id="company-name">
+                                <label for="company_name">*Company Name</label>
+                                <input type="text" class="form-control" name="company-name" id="company_name" required>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="email">*First Name</label>
-                                <input type="email" class="form-control" name="email" id="first-name">
+                                <label for="first_name">*First Name</label>
+                                <input type="text" class="form-control" name="first-name" id="first_name" required>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="email">*Last Name</label>
-                                <input type="email" class="form-control" name="email" id="last-name">
+                                <label for="last_name">*Last Name</label>
+                                <input type="text" class="form-control" name="last-name" id="last_name" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="email">*Email</label>
-                                <input type="email" class="form-control" name="email" id="last-name">
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="phone">*Phone</label>
-                                <input type="tel" class="form-control" name="phone" id="phone">
+                                <input type="tel" class="form-control" name="phone" id="phone" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="referral-yes">*Did someone refer you?</label>
                                 <input type="radio" name="referral" id="referral-yes-input" value="yes" onclick="showInputBox()"> Yes
                                 <input type="radio" name="referral" id="referral-no-input" value="no" onclick="hideInputBox()"> No    
-    
                             </div>
                             
-                            <div class="d-flex flex-column mb-3" id="representative-name" style="display:none;">
-                                <label for="representative">Representative Name:</label>
-                                <input class="p-2" type="text" name="representative" id="representative">
+                            <div class="mb-3" id="representative_name" style="display:none;">
+                                <div class="d-flex flex-column">
+                                    <label for="representative_name">Representative Name:</label>
+                                    <input class="p-2" type="text" name="representative" id="representative_name" required>
+                                </div>
+                                
                             </div>
+                            <script>
+                                function showInputBox() {
+                                // Get the input box element
+                                var inputBox = document.getElementById("representative-name");
+    
+                                // Show the input box
+                                inputBox.style.display = "block";
+                                }
+    
+                                function hideInputBox() {
+                                // Get the input box element
+                                var inputBox = document.getElementById("representative-name");
+    
+                                // Hide the input box
+                                inputBox.style.display = "none";
+                                }
+    
+                            </script>
                             <div>
-                                <label class="mb-3 form-group d-flex flex-column" for="contact-method">What is the best way to reach you?</label>
-                                <select class="p-3 w-50" id="contact-method" name="contact-method">
+                                <label class="mb-3 form-group d-flex flex-column" for="contact_method">What is the best way to reach you?</label>
+                                <select class="p-3 w-50" id="contact_method" name="contact_method">
                                     <option value="email">Email</option>
                                     <option value="phone">Phone</option>
                                     <option value="text">Text</option>
@@ -200,20 +203,21 @@
                             </div>
                             <button class="btn btn-purple w-50 p-3 mt-5" type="button" onclick="showQuestions()">Next</button>
                         </div>
+
                         <div id="second-page" class="form-page bg-white text-black p-3">
                            
                             <h4 class="mb-3">Legal Details</h4>
                             <div class="form-group d-flex flex-column mb-3">
-                                <label for="age">*Legal Business Name</label>
-                                <input class="p-2" type="text" name="business-name" id="business-name">
+                                <label for="legal_business_name">*Legal Business Name</label>
+                                <input class="p-2" type="text" name="legal_business_name" id="legal_business_name" required>
                             </div>
                             <div class="form-group d-flex flex-column mb-3">
-                                <label for="your-title">*Your Title</label>
-                                <input class="p-2" type="text" name="your-title" id="your-title">
+                                <label for="business_title">*Your Title</label>
+                                <input class="p-2" type="text" name="business_title" id="business_title" required>
                             </div>
                            <div class="form-group d-flex flex-column mb-3">
-                                <label class="form-group d-flex flex-column" for="entity-type">*Entity Type</label>
-                                <select class="p-2 w-50" id="entity-type" name="entity-type">
+                                <label class="form-group d-flex flex-column" for="entity_type">*Entity Type</label>
+                                <select class="p-2 w-50" id="entity_type" name="entity_type">
                                     <option value="text">None</option>
                                     <option value="text">Corporation</option>
                                     <option value="text">Limited Liability Company</option>
@@ -226,33 +230,28 @@
                                 </select>
                            </div>
                            <div class="form-group d-flex flex-column mb-3">
-                            <label for="tax-id">*Federal Tax ID</label>
-                            <input class="p-2" type="number" name="tax-id" id="tax-id">
+                            <label for="tax_id">*Federal Tax ID</label>
+                            <input class="p-2" type="text" name="tax_id" id="tax_id" required>
                            </div>
 
                            <h4 class="mt-5 mb-3">Business Details:</h4>
                            <div class="form-group mb-3 d-flex flex-column mb-3">
                                 <label for="street">*Street</label>
-                                <input class="p-2" type="text" name="street" id="street">
-                            </div>
-                           <div class="form-group mb-3 d-flex flex-column mb-3">
-                                <label for="street">*Street</label>
-                                <input class="p-2" type="text" name="street" id="street">
+                                <input class="p-2" type="text" name="street" id="street" required>
                             </div>
                            <div class="form-group mb-3 d-flex flex-column mb-3">
                                 <label for="city">*City</label>
-                                <input class="p-2" type="text" name="city" id="city">
+                                <input class="p-2" type="text" name="city" id="city" required>
                             </div>
                            <div class="form-group mb-3 d-flex flex-column mb-3">
                                 <label for="state">*State</label>
-                                <input class="p-2" type="text" name="state" id="state">
+                                <input class="p-2" type="text" name="state" id="state" required>
                             </div>
                            <div class="form-group mb-3 d-flex flex-column mb-3">
                                 <label for="zip">*Zip Code</label>
-                                <input class="p-2" type="number" name="zip" id="zip">
+                                <input class="p-2" type="number" name="zip" id="zip" required>
                             </div>
                             <input type="submit" class="requestBtn btn btn-purple mt-5 p-3 px-4 w-100">
-                        </div>
                         </div>
                     </form>
                 </div>
@@ -264,7 +263,8 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-4 me-auto mb-5">
                     <img class="w-50" src="assets/img/logo.png">
-                    <p>Are you ready to learn how much your business could be saving? Interested in exploring how ERC funds can help your organization grow? Reach out to us today to start the ERC refund process or an advance payment on your refund.</p>
+                    <p class="fs-2 mb-5 mt-5 fw-bolder">The clock is ticking. Check your eligibility now.</p>
+                    <a href="erc-application.html" role="button" class="btn btn-black p-3 px-4">CHECK ELIGIBILITY</a>
                 </div>
 
                     <!-- deskt footer -->
@@ -318,7 +318,7 @@
                     <div class="d-flex">
                         <div class="col-5">
                             <div>
-                                <h3>RREFERRAL</h3>
+                                <h3>REFERRAL</h3>
                                 <a href="referral-partner.html">Overview</a>
                             </div>
                         </div>
@@ -336,18 +336,13 @@
                 </div>
                 
             </div>
-            <div class="row mt-5">
-                <div class="col-12 col-md-6 d-flex flex-column flex-md-row justify-content-center align-items-center">
-                    <p class="fs-2 me-0 me-md-5 mb-3 mb-md-0 fw-bolder">Time is running low.</p>
-                    <a href="erc-application.html" role="button" class="btn btn-black p-3 px-4">CHECK ELIGIBILITY</a>
-                </div>
-            </div>
+            
             <div class="line-white-top mb-3 mt-3"></div>
             <div class="d-flex flex-column flex-md-row">
                 <p id="copyright"></p>
                 <div class="d-flex ms-md-4 ms-0">
-                    <a href="privacy.html" class="ms-0 md-md-4 me-4">Privacy Policy</a>
-                    <a href="terms.html">Terms of Use</a>
+                    <a href="assets/docs/Careful Accounting Privacy Policy.docx" download class="ms-0 md-md-4 me-4">Privacy Policy</a>
+                    <a href="assets/docs/Careful Accounting Terms of Use.docx" download>Terms of Use</a>
                 </div>
                
             </div>
@@ -418,7 +413,7 @@
               $.ajax({
                   type: "POST",
                   dataType: "json",
-                  url: "submit_email.php",
+                  url: "submit_email_ref.php",
                   data: frm.serialize(),
                   success: function (response) {
                       console.log('status:'+response.status);
@@ -443,7 +438,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/copyright.js"></script>
     <script src="assets/js/nav.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
 
 </body>
 </html>

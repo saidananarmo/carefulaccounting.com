@@ -6,11 +6,9 @@ header('Content-Type: application/json');
 $name                = $_POST['name'];
 $email               = $_POST['email'];
 $phone               = $_POST['phone'];
-$company_name       = $_POST['company_name'];
+$company_name        = $_POST['company_name'];
 $state               = $_POST['state'];
 $representative_name = $_POST['representative_name'];
-
-
 
 $to = "clientservices@carefulaccounting.com";
 $subject = "Interested Contact";
