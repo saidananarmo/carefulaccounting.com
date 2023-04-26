@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/tabs.css">
     <link rel="stylesheet" href="assets/css/referral.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="upper-header">
@@ -131,15 +132,6 @@
                                 }
                           </script>
 
-                          <style>
-                            .form-page {
-                              display: none;
-                            }
-                            .form-page:first-child {
-                            display: block !important;
-                            }
-                          </style>
-
                         <h3 class="fs-5 mb-4">Count on us to get the credit you deserve.</h3>
                         <div id="first-page" class="bg-white text-black p-3">
                             <div class="form-group mb-3">
@@ -168,7 +160,7 @@
                                 <input type="radio" name="referral" id="referral-no-input" value="no" onclick="hideInputBox()"> No    
                             </div>
                             
-                            <div class="mb-3" id="representative_name" style="display:none;">
+                            <div class="mb-3" id="representative_name_box" style="display:none;">
                                 <div class="d-flex flex-column">
                                     <label for="representative_name">Representative Name:</label>
                                     <input class="p-2" type="text" name="representative" id="representative_name" required>
@@ -178,7 +170,7 @@
                             <script>
                                 function showInputBox() {
                                 // Get the input box element
-                                var inputBox = document.getElementById("representative-name");
+                                var inputBox = document.getElementById("representative_name_box");
     
                                 // Show the input box
                                 inputBox.style.display = "block";
@@ -186,7 +178,7 @@
     
                                 function hideInputBox() {
                                 // Get the input box element
-                                var inputBox = document.getElementById("representative-name");
+                                var inputBox = document.getElementById("representative_name_box");
     
                                 // Hide the input box
                                 inputBox.style.display = "none";

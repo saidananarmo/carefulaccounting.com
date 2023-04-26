@@ -4,3 +4,10 @@ input[type="text"], input[type="tel"], input[type="email"] {
     border-radius: 0;
     color: rgb(0, 0, 0);
 }
+
+.form-page {
+  display: none;
+}
+.form-page:first-child {
+    display: block;
+}
