@@ -136,15 +136,15 @@
                         <div id="first-page" class="bg-white text-black p-3">
                             <div class="form-group mb-3">
                                 <label for="company_name">*Company Name</label>
-                                <input type="text" class="form-control" name="company-name" id="company_name" required>
+                                <input type="text" class="form-control" name="company_name" id="company_name" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="first_name">*First Name</label>
-                                <input type="text" class="form-control" name="first-name" id="first_name" required>
+                                <input type="text" class="form-control" name="first_name" id="first_name" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="last_name">*Last Name</label>
-                                <input type="text" class="form-control" name="last-name" id="last_name" required>
+                                <input type="text" class="form-control" name="last_name" id="last_name" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="email">*Email</label>
@@ -354,46 +354,97 @@
   
         $(".requestBtn").click(function(){
   
-          var contact_name = document.forms["myForm"]["name"].value;
-          if (contact_name == "") {
-              alert("Please Provide Name");
-              document.forms["myForm"]["name"].focus();
-              return false;
-          }
-  
-          var email = document.forms["myForm"]["email"].value;
-          if (email == "") {
-              alert("Please Provide Email");
-              document.forms["myForm"]["email"].focus();
-              return false;
-          }
-  
-          if (!validateEmail(email)) {
-              alert("Wrong Email Format");
-              document.forms["myForm"]["email"].focus();
-              return false;
-          }
-  
-          var phone = document.forms["myForm"]["phone"].value;
-          if (phone == "") {
-            alert("Please Provide Phone");
-            document.forms["myForm"]["phone"].focus();
-            return false;
-          }
-  
-          var business_name = document.forms["myForm"]["business_name"].value;
-          if (business_name == "") {
+            var company_name = document.forms["myForm"]["company_name"].value;
+            if (company_name == "") {
             alert("Please Provide Business Name");
-            document.forms["myForm"]["business_name"].focus();
+            document.forms["myForm"]["company_name"].focus();
             return false;
-          }
+            }
+
+            var first_name = document.forms["myForm"]["first_name"].value;
+            if (first_name == "") {
+                alert("Please Provide Your First Name");
+                document.forms["myForm"]["first_name"].focus();
+                return false;
+            }
+
+            var last_name = document.forms["myForm"]["last_name"].value;
+            if (last_name == "") {
+                alert("Please Provide Your Last Name");
+                document.forms["myForm"]["last_name"].focus();
+                return false;
+            }
   
-          var phone = document.forms["myForm"]["state"].value;
-          if (phone == "") {
-            alert("Please Provide State");
-            document.forms["myForm"]["state"].focus();
-            return false;
-          }
+            var email = document.forms["myForm"]["email"].value;
+            if (email == "") {
+                alert("Please Provide Email");
+                document.forms["myForm"]["email"].focus();
+                return false;
+            }
+  
+            if (!validateEmail(email)) {
+                alert("Wrong Email Format");
+                document.forms["myForm"]["email"].focus();
+                return false;
+            }
+  
+            var phone = document.forms["myForm"]["phone"].value;
+            if (phone == "") {
+                alert("Please Provide Phone");
+                document.forms["myForm"]["phone"].focus();
+                return false;
+            }
+  
+          
+  
+            var legal_business_name = document.forms["myForm"]["legal_business_name"].value;
+            if (legal_business_name == "") {
+                alert("Please provide you legal business name");
+                document.forms["myForm"]["legal_business_name"].focus();
+                return false;
+            }
+
+            var business_title = document.forms["myForm"]["business_title"].value;
+            if (business_title == "") {
+                alert("Please provide your business title");
+                document.forms["myForm"]["business_title"].focus();
+                return false;
+            }
+
+            var tax_id = document.forms["myForm"]["tax_id"].value;
+            if (tax_id == "") {
+                alert("Please provide your federal tax ID");
+                document.forms["myForm"]["tax_id"].focus();
+                return false;
+            }
+
+            var street = document.forms["myForm"]["street"].value;
+            if (street == "") {
+                alert("Please provide your street name");
+                document.forms["myForm"]["street"].focus();
+                return false;
+            }
+
+            var city = document.forms["myForm"]["city"].value;
+            if (city == "") {
+                alert("Please provide your city");
+                document.forms["myForm"]["city"].focus();
+                return false;
+            }
+
+            var state = document.forms["myForm"]["state"].value;
+            if (state == "") {
+                alert("Please provide your state");
+                document.forms["myForm"]["state"].focus();
+                return false;
+            }
+
+            var zip = document.forms["myForm"]["zip"].value;
+            if (zip == "") {
+                alert("Please provide your zip code");
+                document.forms["myForm"]["zip"].focus();
+                return false;
+            }
   
           ans = confirm("Sure to Submit?");
           if (ans == true)
@@ -425,7 +476,7 @@
   
         });
   
-      </script>
+    </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/copyright.js"></script>
