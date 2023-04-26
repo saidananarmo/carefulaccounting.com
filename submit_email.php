@@ -6,9 +6,11 @@ header('Content-Type: application/json');
 $name                = $_POST['name'];
 $email               = $_POST['email'];
 $phone               = $_POST['phone'];
-$business_name       = $_POST['business_name'];
+$company_name       = $_POST['company_name'];
 $state               = $_POST['state'];
 $representative_name = $_POST['representative_name'];
+
+
 
 $to = "clientservices@carefulaccounting.com";
 $subject = "Interested Contact";
@@ -17,7 +19,7 @@ $message = "<b>The following contact have a claim prepared</b>";
 $message .= "<h1>Name:" . $name . "</h1>";
 $message .= "<h1>Email:" . $email . "</h1>";
 $message .= "<h1>Phone:" . $phone . "</h1>";
-$message .= "<h1>Business Name: " . $business_name . "</h1>";
+$message .= "<h1>Company Name: " . $company_name . "</h1>";
 $message .= "<h1>State: " . $state . "</h1>";
 $message .= "<h1>Representative Name: " . $representative_name . "</h1>";
 

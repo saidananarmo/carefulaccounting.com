@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/tabs.css">
+    <link rel="stylesheet" href="assets/css/referral.css">
 </head>
 <body>
     <div class="upper-header">
@@ -117,35 +118,142 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 p-0">
-                    <form action="POST" id="myForm" class="p" name="myForm"  enctype="multipart/form-data" method="post" onsubmit="return false;" class="p-4">
-                        <h3 class="fs-5">Whether Careful Accounting processes your claim or you have a claim prepared, you can count on us to get your money back.</h3>
+                <form action="POST" id="myForm" name="myForm"  enctype="multipart/form-data" method="post" onsubmit="return false;" class="p-4">
 
-                        <div class="form-group mb-3">
-                            <label for="name">First & Last Name *</label>
-                            <input type="text" class="form-control" name="name" id="name">
+                        <script>
+                            function showQuestions() {
+                                // Get the current page and the next page
+                                var currentPage = document.getElementById("first-page");
+                                var nextPage = document.getElementById("second-page");
+                                
+                                // Hide the current page and show the next page
+                                currentPage.style.display = "none";
+                                nextPage.style.display = "block";
+                                }
+                          </script>
+                          <style>
+                            .form-page {
+                              display: none;
+                            }
+                            .form-page:first-child {
+                            display: block !important;
+                            }
+                          </style>
+                          <script>
+                            function showInputBox() {
+                            // Get the input box element
+                            var inputBox = document.getElementById("representative-name");
+
+                            // Show the input box
+                            inputBox.style.display = "block";
+                            }
+
+                            function hideInputBox() {
+                            // Get the input box element
+                            var inputBox = document.getElementById("representative-name");
+
+                            // Hide the input box
+                            inputBox.style.display = "none";
+                            }
+
+                        </script>
+                        <h3 class="fs-5 mb-4">Count on us to get the credit you deserve.</h3>
+                        <div id="first-page" class="bg-white text-black p-3">
+                            <div class="form-group mb-3">
+                                <label for="name">*Company Name</label>
+                                <input type="text" class="form-control" name="name" id="company-name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email">*First Name</label>
+                                <input type="email" class="form-control" name="email" id="first-name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email">*Last Name</label>
+                                <input type="email" class="form-control" name="email" id="last-name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email">*Email</label>
+                                <input type="email" class="form-control" name="email" id="last-name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="phone">*Phone</label>
+                                <input type="tel" class="form-control" name="phone" id="phone">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="referral-yes">*Did someone refer you?</label>
+                                <input type="radio" name="referral" id="referral-yes-input" value="yes" onclick="showInputBox()"> Yes
+                                <input type="radio" name="referral" id="referral-no-input" value="no" onclick="hideInputBox()"> No    
+    
+                            </div>
+                            
+                            <div class="d-flex flex-column mb-3" id="representative-name" style="display:none;">
+                                <label for="representative">Representative Name:</label>
+                                <input class="p-2" type="text" name="representative" id="representative">
+                            </div>
+                            <div>
+                                <label class="mb-3 form-group d-flex flex-column" for="contact-method">What is the best way to reach you?</label>
+                                <select class="p-3 w-50" id="contact-method" name="contact-method">
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="text">Text</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-purple w-50 p-3 mt-5" type="button" onclick="showQuestions()">Next</button>
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email *</label>
-                            <input type="email" class="form-control" name="email" id="email">
+                        <div id="second-page" class="form-page bg-white text-black p-3">
+                           
+                            <h4 class="mb-3">Legal Details</h4>
+                            <div class="form-group d-flex flex-column mb-3">
+                                <label for="age">*Legal Business Name</label>
+                                <input class="p-2" type="text" name="business-name" id="business-name">
+                            </div>
+                            <div class="form-group d-flex flex-column mb-3">
+                                <label for="your-title">*Your Title</label>
+                                <input class="p-2" type="text" name="your-title" id="your-title">
+                            </div>
+                           <div class="form-group d-flex flex-column mb-3">
+                                <label class="form-group d-flex flex-column" for="entity-type">*Entity Type</label>
+                                <select class="p-2 w-50" id="entity-type" name="entity-type">
+                                    <option value="text">None</option>
+                                    <option value="text">Corporation</option>
+                                    <option value="text">Limited Liability Company</option>
+                                    <option value="text">Sole Proprietor</option>
+                                    <option value="text">Partnership</option>
+                                    <option value="text">Limited Partnership</option>
+                                    <option value="text">Limited Liability Partnership</option>
+                                    <option value="text">Non-Profit</option>
+                                    <option value="text">Other</option>
+                                </select>
+                           </div>
+                           <div class="form-group d-flex flex-column mb-3">
+                            <label for="tax-id">*Federal Tax ID</label>
+                            <input class="p-2" type="number" name="tax-id" id="tax-id">
+                           </div>
+
+                           <h4 class="mt-5 mb-3">Business Details:</h4>
+                           <div class="form-group mb-3 d-flex flex-column mb-3">
+                                <label for="street">*Street</label>
+                                <input class="p-2" type="text" name="street" id="street">
+                            </div>
+                           <div class="form-group mb-3 d-flex flex-column mb-3">
+                                <label for="street">*Street</label>
+                                <input class="p-2" type="text" name="street" id="street">
+                            </div>
+                           <div class="form-group mb-3 d-flex flex-column mb-3">
+                                <label for="city">*City</label>
+                                <input class="p-2" type="text" name="city" id="city">
+                            </div>
+                           <div class="form-group mb-3 d-flex flex-column mb-3">
+                                <label for="state">*State</label>
+                                <input class="p-2" type="text" name="state" id="state">
+                            </div>
+                           <div class="form-group mb-3 d-flex flex-column mb-3">
+                                <label for="zip">*Zip Code</label>
+                                <input class="p-2" type="number" name="zip" id="zip">
+                            </div>
+                            <input type="submit" class="requestBtn btn btn-purple mt-5 p-3 px-4 w-100">
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="phone">Phone *</label>
-                            <input type="tel" class="form-control" name="phone" id="phone">
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="business-name">Business Name *</label>
-                            <input type="text" class="form-control" name="business_name" id="business-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State *</label>
-                            <input type="text" class="form-control" name="state" id="state">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="representative-name">Representative Name</label>
-                            <input type="text" class="form-control" name="representative_name" id="representative-name">
-                        </div>
-                        <p class="text-small">By clicking on Get Started, I request and provide consent to Careful Accounting to contact me by email, phone, or text message at the number provided above regarding Adesso’s services and programs. I understand that message or data rates may apply, and that I may withdraw this authorization and consent at any time.*</p>
-                        <input type="submit" class="requestBtn btn btn-white p-3 px-4 w-100">
                     </form>
                 </div>
             </div>
@@ -335,6 +443,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/copyright.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
 
 </body>
 </html>
