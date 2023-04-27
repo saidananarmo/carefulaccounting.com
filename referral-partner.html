@@ -21,7 +21,7 @@
                     <a href="contact.html">CONTACT US</a>
                 </div>
                 <div class=" p-3">
-                    <a class="tel p-3" href="tel:13472578120">(347) 257-8120</a>
+                    <a class="tel p-3" href="tel:13025951080">(347) 257-8120</a>
                 </div>
             </div>
             <div class="d-flex d-md-none justify-content-center">
@@ -29,7 +29,7 @@
                     <a href="contact.html">CONTACT US</a>
                 </div>
                 <div class=" p-3">
-                    <a class="tel p-3" href="tel:13472578120">(347) 257-8120</a>
+                    <a class="tel p-3" href="tel:13025951080">(347) 257-8120</a>
                 </div>
             </div>
         </div>
@@ -121,16 +121,28 @@
                 <div class="col-12 col-md-6 p-0">
                     <form action="POST" id="myForm" name="myForm"  enctype="multipart/form-data" method="post" onsubmit="return false;" class="p-4">
                         <script>
-                            function showQuestions() {
+                            
+                            function nextQuestions() {
                                 // Get the current page and the next page
-                                var currentPage = document.getElementById("first-page");
-                                var nextPage = document.getElementById("second-page");
+                                let currentPage = document.getElementById("first-page");
+                                let nextPage = document.getElementById("second-page");
                                 
                                 // Hide the current page and show the next page
                                 currentPage.style.display = "none";
                                 nextPage.style.display = "block";
-                                }
+                            }
+                            function goBack() {
+                                 // Get the current page and the next page
+                                let currentPage = document.getElementById("first-page");
+                                let nextPage = document.getElementById("second-page");
+                                
+                                // Hide the current page and show the next page
+                                currentPage.style.display = "block";
+                                nextPage.style.display = "none";
+                            }
+                            
                           </script>
+                          
 
                         <h3 class="fs-5 mb-4">Count on us to get the credit you deserve.</h3>
                         <div id="first-page" class="bg-white text-black p-3">
@@ -163,7 +175,7 @@
                             <div class="mb-3" id="representative_name_box" style="display:none;">
                                 <div class="d-flex flex-column">
                                     <label for="representative_name">Representative Name:</label>
-                                    <input class="p-2" type="text" name="representative" id="representative_name" required>
+                                    <input class="p-2" type="text" name="representative_name" id="representative_name" required>
                                 </div>
                                 
                             </div>
@@ -193,7 +205,7 @@
                                     <option value="text">Text</option>
                                 </select>
                             </div>
-                            <button class="btn btn-purple w-50 p-3 mt-5" type="button" onclick="showQuestions()">Next</button>
+                            <button class="btn btn-purple w-50 p-3 mt-5" type="button" onclick="nextQuestions()">Next</button>
                         </div>
 
                         <div id="second-page" class="form-page bg-white text-black p-3">
@@ -210,15 +222,15 @@
                            <div class="form-group d-flex flex-column mb-3">
                                 <label class="form-group d-flex flex-column" for="entity_type">*Entity Type</label>
                                 <select class="p-2 w-50" id="entity_type" name="entity_type">
-                                    <option value="text">None</option>
-                                    <option value="text">Corporation</option>
-                                    <option value="text">Limited Liability Company</option>
-                                    <option value="text">Sole Proprietor</option>
-                                    <option value="text">Partnership</option>
-                                    <option value="text">Limited Partnership</option>
-                                    <option value="text">Limited Liability Partnership</option>
-                                    <option value="text">Non-Profit</option>
-                                    <option value="text">Other</option>
+                                    <option value="None">None</option>
+                                    <option value="Corporation">Corporation</option>
+                                    <option value="Limited Liability Company">Limited Liability Company</option>
+                                    <option value="Sole Proprietor">Sole Proprietor</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Limited Partnership">Limited Partnership</option>
+                                    <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                                    <option value="Non-Profit">Non-Profit</option>
+                                    <option value="Other">Other</option>
                                 </select>
                            </div>
                            <div class="form-group d-flex flex-column mb-3">
@@ -243,8 +255,19 @@
                                 <label for="zip">*Zip Code</label>
                                 <input class="p-2" type="number" name="zip" id="zip" required>
                             </div>
-                            <input type="submit" class="requestBtn btn btn-purple mt-5 p-3 px-4 w-100">
+                            <div class="d-flex">
+                                <button class="btn w-50 mt-5 me-5 p-3" type="button" onclick="goBack()" style="border: 3px solid rgb(56, 61, 131); background: none;">Back</button>
+                                <button onclick="showConfirmationPage()" type="submit" class="requestBtn btn btn-purple mt-5 p-3 px-4 w-100">Submit</button>
+                            </div>
+                            
                         </div>
+                        
+                        <div id="confirmation-page" class="form-page bg-white text-black p-3">
+                            <h4>Thank you!</h4>
+                            <p>We have received your request.</p>
+                            <p>A Referral Agreement has been sent to your email for electronic signature.</p>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
@@ -454,25 +477,38 @@
   
   
               $.ajax({
-                  type: "POST",
-                  dataType: "json",
-                  url: "submit_email_ref.php",
-                  data: frm.serialize(),
-                  success: function (response) {
-                      console.log('status:'+response.status);
-                      if (response.status == "success") {
-  
-                        alert("Email Sent, Thank You.");
-  
-                      }else if (response.status == "failure") {
-                      }
-                  },
-                  error: function (data) {
-                      console.log('An error occurred.');
-                      console.log(data);
-                  },
-              });
+                    type: "POST",
+                    dataType: "json",
+                    url: "send_emails.php",
+                    data: frm.serialize(),
+                    success: function (response) {
+                        console.log('status:'+response.status);
+                        if (response.status == "success") {
+                
+                            
+                            function showConfirmationPage() {
+                                let confirmationPage = document.getElementById("confirmation-page");
+                                confirmationPage.style.display = "block";
+                                curentPage.style.display = "none";
+                                nextPage.style.display = "none";
+                            }
+                             $('#myForm').on('submit', function() {
+                                this.reset();
+                              });
+                            alert("Email sent, thank you.");
+                
+                        } else if (response.status == "failure") {
+                            // Handle failure
+                        }
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+
           }
+         
   
         });
   

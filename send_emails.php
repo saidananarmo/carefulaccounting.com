@@ -2,7 +2,6 @@
 
 header('Content-Type: application/json');
 
-
 $first_name          = $_POST['first_name'];
 $last_name           = $_POST['last_name'];
 $email               = $_POST['email'];
@@ -20,6 +19,25 @@ $street              = $_POST['street'];
 $city                = $_POST['city'];
 $state               = $_POST['state'];
 $zip                 = $_POST['zip'];
+
+$header = "From:clientservices@carefulaccounting.com \r\n";
+$header .= "MIME-Version: 1.0\r\n";
+$header .= "Content-type: text/html\r\n";
+
+$email_content = "<p>A Referral Agreement for $company_name has been sent by Careful Accounting for your signature.</p>";
+$email_content .= "<p>Thanks for finishing the Referral Partner Application. To proceed with the application process, kindly examine and sign the documents attached.</p>";
+$email_content .= "<p>Thank you!</p>";
+$email_content .= "<p>Start the signing process by clicking on the button below.</p>";
+$email_content .= "<br>";
+$email_content .= "<button href=''>See Document</button>";
+$email_content .= "<br>";
+$email_content .= "<b>Careful Accounting<b>";
+$email_content .= "<br>";
+$email_content .= "<a href='mailto:clientservices@carefulaccounting.com'>clientservices@carefulaccounting.com</a>";
+$email_content .= "<br>";
+$email_content .="<a href='tel:13472578120'>(347) 257-8120</a>";
+
+$retval = mail($email, "Please Sign Documents", $email_content, $header);
 
 $to = "clientservices@carefulaccounting.com";
 $subject = "Referral Partner";
@@ -51,5 +69,3 @@ $retval = mail($to, $subject, $message, $header);
 
 header('Content-Type: application/json');
 die('{"status":"success", "message":"Email Sent to carefulaccounting.com Team"}');
-
-?>
